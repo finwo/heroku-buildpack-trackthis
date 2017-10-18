@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# fail very hard
+set -o pipefail
+set -eu
+
+# include hidden files in globs
+shopt -s dotglob
+
+# setup variables & pwd
+build_dir=$1
+cd ${build_dir}
+
+# This was prepared already
+make saas
