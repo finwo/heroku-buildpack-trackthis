@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ -f "Makefile" && -f "config.php.saas" ]]; then
+if [[ -f $1/Makefile && -f $1/config.php.saas ]]; then
   echo "Trackthis" && exit 0
 else
     exit 1
